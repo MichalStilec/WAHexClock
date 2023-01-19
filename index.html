@@ -17,6 +17,8 @@
 
     <script>
         setInterval(function () {
+            const body = document.querySelector("body");
+
             var date = new Date();
 
             var hour = date.getHours().toString().padStart(2, '0');
@@ -26,6 +28,8 @@
             document.getElementById('hour').innerHTML = hour;
             document.getElementById('minute').innerHTML = minute;
             document.getElementById('second').innerHTML = second;
+
+            body.style.backgroundColor = "#"+hour+minute+second; // Meni barvu podle casu
         }, 1000); // Spousti se kazdych 1000 milisekund (1 sekundu)
     </script>
 
